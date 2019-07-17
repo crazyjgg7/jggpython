@@ -7,7 +7,7 @@ app=Flask(__name__)
 def hello() -> str:
     return 'hello world from Flask'
 
-app.run()
+
 
 @app.route('/hi')
 def readfile(filename):
@@ -15,3 +15,5 @@ def readfile(filename):
         content = reduce(lambda x,y:x+y,files.readlines())
         return content
     return 'content'   
+
+app.run()    
