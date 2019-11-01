@@ -49,3 +49,13 @@ def inputbox(showstr,showorder,length):
     else:
         print("\033[1;31;40m输入为空，请重新输入！！\033[0m")
 
+def wfile(sstr,sfile,smsg,datapath):
+    '''
+    sstr是生成得防伪码   sfile是保存防伪码的文件名   smsg是提示框弹出的消息   datapath是保存防伪码的路径
+    '''
+    def wfile(sstr,sfile,typeis,smsg,datapath):
+    mkdir(datapath)#调用函数创建文件夹
+    datafile=datapath+"\\"+sfile#设置保存防伪码的文件 
+    file=open(datafile,'w')#打开保存防伪码的文件，如果文件不存在就创建
+    wrlist=sstr   #把防伪码信息赋值给 wrlist   
+    
